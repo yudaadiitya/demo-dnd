@@ -1,0 +1,159 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1.5vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.characters {
+  list-style: none;
+  padding-left: 0;
+}
+
+.characters li {
+  display: flex;
+  align-items: center;
+  border: solid 2px #d0d0d0;
+  border-radius: 12px;
+  /* padding: 0.5em 0.8em 0.5em 0.5em; */
+  margin-bottom: 1em;
+  background: #ffffff;
+  width: 285px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+}
+
+.label {
+  display: flex;
+  font-weight: 100;
+  max-width: 60px;
+}
+
+.border0 {
+  background: #00875a;
+  width: 11px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px 0px 0px 12px;
+  /* display: flex; */
+}
+.border1 {
+  background: #5e9047;
+  width: 10px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px 0px 0px 12px;
+  /* display: flex; */
+}
+.border2 {
+  background: #c09934;
+  width: 10px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px 0px 0px 12px;
+  display: flex;
+}
+.border3 {
+  background: #fd9f28;
+  width: 10px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px 0px 0px 12px;
+  display: flex;
+}
+.border4 {
+  background: #ea6017;
+  width: 10px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px 0px 0px 12px;
+  display: flex;
+}
+.border5 {
+  background: #de350b;
+  width: 10px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  border-radius: 12px 0px 0px 12px;
+  display: flex;
+}
+
+.characters p {
+  max-width: 250px;
+  font-weight: bold;
+  margin: 0;
+  color: #444a58;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  left: 0%;
+  right: 0%;
+  top: calc(50% - 38px / 2);
+}
+
+.characters-thumb {
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  background-color: #e8e8e8;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+.characters-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.number-list {
+  text-align: right;
+  padding-bottom: 20px;
+}
+.number-list p {
+  padding:25px 30px 45px 0;
+  font-family: Nunito Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+}
+.button-next{
+  position: relative;
+  left: 130px;
+}
+
+.container{
+  display: flex;
+}
