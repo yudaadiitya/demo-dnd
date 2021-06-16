@@ -4,7 +4,11 @@ import DragIndicatorIcon from "@material-ui/icons/DragIndicator";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import Container from "@material-ui/core/Container";
+import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
 import "./App.css";
+import Line from "./assets/images/Rectangle184.png";
+import Signal from "./assets/images/signal.png"
 
 const finalSpaceCharacters = [
   {
@@ -59,62 +63,67 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>RIASEC</h1>
-        <div className="container">
-          <div className="number-list">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
+    <Container maxWidth="sm" className="container-out">
+      <div className="App">
+        <header className="App-header">
+          <h1>RIASEC</h1>
+          <div className="layout">
+            <div className="instruction">
+          <p>Urutkanlah dari yang paling sesuai (atas - bawah)</p>
+          <img src={Signal} alt="" />
+            </div>
+            <div className="container">
+              <div className="number-list">
+                <p className="label">Paling Sesuai</p>
+                <img src={Line} alt="line" className="line" />
+                <p className="label">Paling Tidak Sesuai</p>
+              </div>
+              <DragDropContext onDragEnd={handleOnDragEnd}>
+                <Droppable droppableId="characters">
+                  {(provided) => (
+                    <ul
+                      className="characters"
+                      {...provided.droppableProps}
+                      ref={provided.innerRef}
+                    >
+                      <div>
+                        {characters.map(({ id, name, label, thumb }, index) => {
+                          return (
+                            <Draggable key={id} draggableId={id} index={index}>
+                              {(provided) => (
+                                <li
+                                  ref={provided.innerRef}
+                                  {...provided.draggableProps}
+                                  {...provided.dragHandleProps}
+                                >
+                                  {/* <label className="label">{label}</label> */}
+                                  <div className={`border${index}`}></div>
+                                  <p>
+                                    {name}
+                                    <DragIndicatorIcon />
+                                  </p>
+                                </li>
+                              )}
+                            </Draggable>
+                          );
+                        })}
+                        {provided.placeholder}
+                      </div>
+                    </ul>
+                  )}
+                </Droppable>
+              </DragDropContext>
+            </div>
           </div>
-          <DragDropContext onDragEnd={handleOnDragEnd}>
-            <Droppable droppableId="characters">
-              {(provided) => (
-                <ul
-                  className="characters"
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                >
-                  <div>
-                    {characters.map(({ id, name, label, thumb }, index) => {
-                      return (
-                        <Draggable key={id} draggableId={id} index={index}>
-                          {(provided) => (
-                            <li
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                            >
-                              {/* <label className="label">{label}</label> */}
-                              <div className={`border${index}`}></div>
-                              <p>
-                                {name}
-                                <DragIndicatorIcon />
-                              </p>
-                            </li>
-                          )}
-                        </Draggable>
-                      );
-                    })}
-                    {provided.placeholder}
-                  </div>
-                </ul>
-              )}
-            </Droppable>
-          </DragDropContext>
-        </div>
-      </header>
-      <Button variant="contained" color="primary" className="button-next">
-        <ArrowRightAltIcon />
-      </Button>
-      <p>
-        <a href="https://www.talentlytica.com/">Talentlytica</a>
-      </p>
-    </div>
+        </header>
+        <Button variant="contained" color="primary" className="button-next">
+          <ArrowRightAltIcon />
+        </Button>
+        <p>
+          <a href="https://www.talentlytica.com/">Talentlytica</a>
+        </p>
+      </div>
+    </Container>
   );
 }
 

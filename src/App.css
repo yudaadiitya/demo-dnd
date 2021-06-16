@@ -142,18 +142,55 @@
   padding-bottom: 20px;
 }
 .number-list p {
-  padding:25px 30px 45px 0;
+  padding:25px 30px 0px 0;
   font-family: Nunito Sans;
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 19px;
+justify-content: center;
+align-items: center;
 }
 .button-next{
   position: relative;
-  left: 130px;
+  left: 100px;
+  bottom:50px;
+  background: #005589;
+border-radius: 4px;
+width: 132px;
+height: 40px;
 }
 
+.label{
+  font-family: Nunito Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 14px;
+color: #A5ADBA;
+}
+
+.line{
+  justify-content: center;
+  position: relative;
+  right: 40px;
+}
+
+.layout{
+  background: #F5F8FA;
+}
+.instruction{
+  font-family: Nunito Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+color: #A5ADBA;
+}
 .container{
   display: flex;
+  padding: 0 0 50px 0;
 }
