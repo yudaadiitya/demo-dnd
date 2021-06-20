@@ -13,6 +13,8 @@ library.add(faGripVertical);
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Desain2 />
+    <Questions />
   </React.StrictMode>,
   document.getElementById('root')
 );

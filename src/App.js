@@ -5,45 +5,45 @@ import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import Container from "@material-ui/core/Container";
-import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
+import SignalCellularAltIcon from "@material-ui/icons/SignalCellularAlt";
 import "./App.css";
 import Line from "./assets/images/Rectangle184.png";
-import Signal from "./assets/images/signal.png"
+import Signal from "./assets/images/signal.png";
 
 const finalSpaceCharacters = [
   {
     id: "1",
-    name: "Saya menyukai menjadi orang yang mengambil keputusan dan tanggung jawab",
+    name: "Saya dapat kembali memasang sebuah benda setelah membongkarnya",
     label: "Sangat sesuai",
     thumb: "/images/gary.png",
   },
   {
     id: "2",
-    name: "Saya menyukai pekerjaan yang melibatkan aktivitas fisik",
+    name: "Pekerjaan yang mengandalkan kemampuan analisis adalah jenis pekerjaan yang saya sukai",
     label: "Sesuai",
     thumb: "/images/cato.png",
   },
   {
     id: "3",
-    name: "Saya peka terhadap perasaan orang lain asdasdasd ",
+    name: "Saya dikenal banyak orang karena kemampuan saya dalam menciptakan karya-karya artistik",
     label: "Agak sesuai",
     thumb: "/images/kvn.png",
   },
   {
     id: "4",
-    name: "Saya senang mencoba tugas yang berhubungan dengan pekerjaan baru",
+    name: "Saya siap menjadi sukarelawan untuk membantu orang-orang yang membutuhkan",
     label: "Agak tidak sesuai",
     thumb: "/images/mooncake.png",
   },
   {
     id: "5",
-    name: "Saya menyukai menjadi orang yang mengambil keputusan dan tanggung jawab",
+    name: "Saya memahami cara-cara agar orang lain mau berbuat sesuai yang saya inginkan",
     label: "Tidak sesuai",
     thumb: "/images/quinn.png",
   },
   {
     id: "6",
-    name: "Banyak orang menganggap saya adalah orang yang selalu ingin tahu",
+    name: "Saya menempatkan ketepatan dalam setiap hasil pekerjaan saya",
     label: "Sangat tidak sesuai",
     thumb: "/images/quinn.png",
   },
@@ -51,79 +51,104 @@ const finalSpaceCharacters = [
 
 function App() {
   const [characters, updateCharacters] = useState(finalSpaceCharacters);
+  const [count, setCount] = useState(0);
 
   function handleOnDragEnd(result) {
     if (!result.destination) return;
-
     const items = Array.from(characters);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
-
+    if (result) {
+      setCount(count + 1);
+    }
     updateCharacters(items);
   }
 
   return (
-    <Container maxWidth="sm" className="container-out">
-      <div className="App">
-        <header className="App-header">
-          <h1>RIASEC</h1>
-          <div className="layout">
-            <div className="instruction">
-          <p>Urutkanlah dari yang paling sesuai (atas - bawah)</p>
-          <img src={Signal} alt="" />
-            </div>
-            <div className="container">
-              <div className="number-list">
-                <p className="label">Paling Sesuai</p>
-                <img src={Line} alt="line" className="line" />
-                <p className="label">Paling Tidak Sesuai</p>
+    <>
+      <Container maxWidth="sm" className="container-out">
+        <div className="App">
+          <header className="App-header">
+            <h1>RIASEC</h1>
+            <div className="layout">
+              <div className="instruction">
+                <p>Urutkanlah dari yang paling sesuai (atas - bawah)</p>
+                <img src={Signal} alt="" />
               </div>
-              <DragDropContext onDragEnd={handleOnDragEnd}>
-                <Droppable droppableId="characters">
-                  {(provided) => (
-                    <ul
-                      className="characters"
-                      {...provided.droppableProps}
-                      ref={provided.innerRef}
-                    >
-                      <div>
-                        {characters.map(({ id, name, label, thumb }, index) => {
-                          return (
-                            <Draggable key={id} draggableId={id} index={index}>
-                              {(provided) => (
-                                <li
-                                  ref={provided.innerRef}
-                                  {...provided.draggableProps}
-                                  {...provided.dragHandleProps}
+              <div className="container">
+                <div className="number-list">
+                  <p className="label">Paling Sesuai</p>
+                  <img src={Line} alt="line" className="line" />
+                  <p className="label">Paling Tidak Sesuai</p>
+                </div>
+                <DragDropContext onDragEnd={handleOnDragEnd}>
+                  <Droppable droppableId="characters">
+                    {(provided) => (
+                      <ul
+                        className="characters"
+                        {...provided.droppableProps}
+                        ref={provided.innerRef}
+                      >
+                        <div>
+                          {characters.map(
+                            ({ id, name, label, thumb }, index) => {
+                              return (
+                                <Draggable
+                                  key={id}
+                                  draggableId={id}
+                                  index={index}
                                 >
-                                  {/* <label className="label">{label}</label> */}
-                                  <div className={`border${index}`}></div>
-                                  <p>
-                                    {name}
-                                    <DragIndicatorIcon />
-                                  </p>
-                                </li>
-                              )}
-                            </Draggable>
-                          );
-                        })}
-                        {provided.placeholder}
-                      </div>
-                    </ul>
-                  )}
-                </Droppable>
-              </DragDropContext>
+                                  {(provided) => (
+                                    <li
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                    >
+                                      {/* <label className="label">{label}</label> */}
+                                      <div className={`border${index}`}></div>
+                                      <p>
+                                        {name}
+                                        <DragIndicatorIcon
+                                          style={{
+                                            color: "rgba(52, 52, 52, 0.5)",
+                                            position: "relative",
+                                            left: 20,
+                                          }}
+                                        />
+                                      </p>
+                                    </li>
+                                  )}
+                                </Draggable>
+                              );
+                            }
+                          )}
+                          {provided.placeholder}
+                        </div>
+                      </ul>
+                    )}
+                  </Droppable>
+                </DragDropContext>
+              </div>
             </div>
-          </div>
-        </header>
-        <Button variant="contained" color="primary" className="button-next">
-          <ArrowRightAltIcon />
-        </Button>
-        <p>
-          <a href="https://www.talentlytica.com/">Talentlytica</a>
-        </p>
-      </div>
-    </Container>
+          </header>
+          {count >= 1 ? (
+          <Button
+            variant="contained"
+            style={{
+              backgroundColor: "#005589",
+              width: 132,
+              height: 40,
+              position: "relative",
+              left: 90,
+              bottom: 60,
+            }}
+            onClick={() => updateCharacters(finalSpaceCharacters)}
+          >
+            <ArrowRightAltIcon style={{ color: "#FFFFFF" }} />
+          </Button>) : (<div></div>)}
+        </div>
+      </Container>
+    </>
   );
 }
 
