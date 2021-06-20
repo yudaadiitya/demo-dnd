@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/demo-dnd/static/css/main.829c5909.chunk.css",
-    "main.js": "/demo-dnd/static/js/main.c4f2cb9e.chunk.js",
-    "main.js.map": "/demo-dnd/static/js/main.c4f2cb9e.chunk.js.map",
+    "main.css": "/demo-dnd/static/css/main.8e92e2b1.chunk.css",
+    "main.js": "/demo-dnd/static/js/main.a1084edc.chunk.js",
+    "main.js.map": "/demo-dnd/static/js/main.a1084edc.chunk.js.map",
     "runtime-main.js": "/demo-dnd/static/js/runtime-main.d5ecec3f.js",
     "runtime-main.js.map": "/demo-dnd/static/js/runtime-main.d5ecec3f.js.map",
-    "static/js/2.0d1ae212.chunk.js": "/demo-dnd/static/js/2.0d1ae212.chunk.js",
-    "static/js/2.0d1ae212.chunk.js.map": "/demo-dnd/static/js/2.0d1ae212.chunk.js.map",
+    "static/js/2.e71aae00.chunk.js": "/demo-dnd/static/js/2.e71aae00.chunk.js",
+    "static/js/2.e71aae00.chunk.js.map": "/demo-dnd/static/js/2.e71aae00.chunk.js.map",
     "index.html": "/demo-dnd/index.html",
-    "precache-manifest.fa9e740fc0f40981368060d7e9881b50.js": "/demo-dnd/precache-manifest.fa9e740fc0f40981368060d7e9881b50.js",
+    "precache-manifest.0e4ac83cffe6e6c6fb79ee85daeccdad.js": "/demo-dnd/precache-manifest.0e4ac83cffe6e6c6fb79ee85daeccdad.js",
     "service-worker.js": "/demo-dnd/service-worker.js",
-    "static/css/main.829c5909.chunk.css.map": "/demo-dnd/static/css/main.829c5909.chunk.css.map",
-    "static/js/2.0d1ae212.chunk.js.LICENSE.txt": "/demo-dnd/static/js/2.0d1ae212.chunk.js.LICENSE.txt"
+    "static/css/main.8e92e2b1.chunk.css.map": "/demo-dnd/static/css/main.8e92e2b1.chunk.css.map",
+    "static/js/2.e71aae00.chunk.js.LICENSE.txt": "/demo-dnd/static/js/2.e71aae00.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d5ecec3f.js",
-    "static/js/2.0d1ae212.chunk.js",
-    "static/css/main.829c5909.chunk.css",
-    "static/js/main.c4f2cb9e.chunk.js"
+    "static/js/2.e71aae00.chunk.js",
+    "static/css/main.8e92e2b1.chunk.css",
+    "static/js/main.a1084edc.chunk.js"
   ]
 }
