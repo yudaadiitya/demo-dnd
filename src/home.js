@@ -119,7 +119,7 @@ function Home() {
                   <p>Membandingkan Desain</p>
                   <img src={Signal} alt="signal" />
                 </div>
-                <Link to="/desain-a">
+                <Link to="/demo-dnd/desain-a">
                   <Paper
                     style={{
                       width: 316,
@@ -131,7 +131,7 @@ function Home() {
                     <p className="label-home">Desain A</p>
                   </Paper>
                 </Link>
-                <Link to="/desain-b">
+                <Link to="/demo-dnd/desain-b">
                   <Paper
                     style={{
                       width: 316,
