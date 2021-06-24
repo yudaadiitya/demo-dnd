@@ -9,9 +9,9 @@ import DesainA from "./Desain3";
 function App() {
   return (
     <Router>
-        <Route exact path="/" component={Home} />
-        <Route path="/desain-b" component={DesainB}/>
-        <Route path="/desain-a" component={DesainA}/>
+        <Route exact path="/demo-dnd" component={Home} />
+        <Route path="/demo-dnd/desain-b" component={DesainB}/>
+        <Route path="/demo-dnd/desain-a" component={DesainA}/>
         {/* <Route path="/desain-c" component={DesainC}/> */}
     </Router>
   );
