@@ -245,7 +245,7 @@ function Desain3() {
                     >
                       <ArrowRightAltIcon style={{ color: "#FFFFFF" }} />
                     </Button>
-                    <Link to="/" className="button-home-3">
+                    <Link to="/demo-dnd" className="button-home-3">
                       <Button
                         variant="contained"
                         style={{ textDecoration: "none" }}

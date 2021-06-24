@@ -156,7 +156,7 @@ function Desain1() {
             >
               <ArrowRightAltIcon style={{ color: "#FFFFFF" }} />
             </Button>
-          <Link to="/" className="button-home">
+          <Link to="/demo-dnd" className="button-home">
             <Button variant="contained" style={{textDecoration:"none"}}>
               <HomeIcon />
             </Button>
