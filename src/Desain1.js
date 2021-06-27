@@ -10,8 +10,7 @@ import "./App.css";
 import Line from "./assets/images/Rectangle184.png";
 import Signal from "./assets/images/signal.png";
 import { Link } from "react-router-dom";
-import HomeIcon from '@material-ui/icons/Home';
-
+import HomeIcon from "@material-ui/icons/Home";
 
 const finalSpaceCharacters = [
   {
@@ -69,103 +68,102 @@ function Desain1() {
 
   return (
     <>
-      <Container maxWidth="sm" className="container-out">
-        <div className="App">
-          <header className="App-header">
-                <h1>RIASEC</h1>
-            <div className="smartphone">
-              <div className="smartphone__content">
-                <div className="layout">
-                  <div className="instruction">
-                    <p>Urutkanlah dari yang paling sesuai (atas - bawah)</p>
-                    <img src={Signal} alt="" />
+      <Container maxWidth="xs" style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems:"center"}}>
+          <h1>RIASEC</h1>
+          <div className="smartphone">
+            <div className="smartphone__content">
+              <div className="layout">
+                <div className="instruction">
+                  <p>
+                    Urutkanlah dari yang Sangat sesuai s/d Sangat tidak sesuai
+                  </p>
+                  <img src={Signal} alt="signal" />
+                </div>
+                <div className="container-1">
+                  <div className="number-list">
+                    <p className="label">Sangat Sesuai</p>
+                    <img src={Line} alt="line" className="line" />
+                    <p className="label">Sangat Tidak Sesuai</p>
                   </div>
-                  <div className="container">
-                    <div className="number-list">
-                      <p className="label">Paling Sesuai</p>
-                      <img src={Line} alt="line" className="line" />
-                      <p className="label">Paling Tidak Sesuai</p>
-                    </div>
-                    <DragDropContext onDragEnd={handleOnDragEnd}>
-                      <Droppable droppableId="characters">
-                        {(provided) => (
-                          <ul
-                            className="characters"
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                          >
-                            <div>
-                              {characters.map(
-                                ({ id, name, label, thumb }, index) => {
-                                  return (
-                                    <Draggable
-                                      key={id}
-                                      draggableId={id}
-                                      index={index}
-                                    >
-                                      {(provided) => (
-                                        <li
-                                          ref={provided.innerRef}
-                                          {...provided.draggableProps}
-                                          {...provided.dragHandleProps}
-                                        >
-                                          {/* <label className="label">{label}</label> */}
-                                          <div
-                                            className={`border${index}`}
-                                          ></div>
-                                          <p>
-                                            {name}
-                                            <DragIndicatorIcon
-                                              style={{
-                                                color: "rgba(52, 52, 52, 0.5)",
-                                                position: "relative",
-                                                left: 20,
-                                              }}
-                                            />
-                                          </p>
-                                        </li>
-                                      )}
-                                    </Draggable>
-                                  );
-                                }
-                              )}
-                              {provided.placeholder}
-                            </div>
-                          </ul>
-                        )}
-                      </Droppable>
-                    </DragDropContext>
-                  </div>
+                  <DragDropContext onDragEnd={handleOnDragEnd}>
+                    <Droppable droppableId="characters">
+                      {(provided) => (
+                        <ul
+                          className="characters"
+                          {...provided.droppableProps}
+                          ref={provided.innerRef}
+                        >
+                          <div>
+                            {characters.map(
+                              ({ id, name, label, thumb }, index) => {
+                                return (
+                                  <Draggable
+                                    key={id}
+                                    draggableId={id}
+                                    index={index}
+                                  >
+                                    {(provided) => (
+                                      <li
+                                        ref={provided.innerRef}
+                                        {...provided.draggableProps}
+                                        {...provided.dragHandleProps}
+                                      >
+                                        {/* <label className="label">{label}</label> */}
+                                        <div className={`border${index}`}></div>
+                                        <p>
+                                          {name}
+                                          <DragIndicatorIcon
+                                            style={{
+                                              color: "rgba(52, 52, 52, 0.5)",
+                                              position: "relative",
+                                              left: 20,
+                                            }}
+                                          />
+                                        </p>
+                                      </li>
+                                    )}
+                                  </Draggable>
+                                );
+                              }
+                            )}
+                            {provided.placeholder}
+                          </div>
+                        </ul>
+                      )}
+                    </Droppable>
+                  </DragDropContext>
                 </div>
               </div>
             </div>
-          </header>
-          {count >= 1 ? (
-            <>
-            <Button
-              variant="contained"
-              style={{
-                backgroundColor: "#005589",
-                width: 132,
-                height: 40,
-                position: "relative",
-                left: 90,
-                bottom: 125,
-              }}
-              onClick={() => updateCharacters(finalSpaceCharacters)}
-            >
-              <ArrowRightAltIcon style={{ color: "#FFFFFF" }} />
-            </Button>
-          <Link to="/demo-dnd" className="button-home">
-            <Button variant="contained" style={{textDecoration:"none"}}>
-              <HomeIcon />
-            </Button>
-          </Link>
-          </>
-          ) : (
-            <div></div>
-          )}
-        </div>
+            {count >= 1 ? (
+              <>
+                <Button
+                  variant="contained"
+                  style={{
+                    backgroundColor: "#005589",
+                    width: 132,
+                    height: 40,
+                    position: "relative",
+                    left: 220,
+                    bottom: 30,
+                  }}
+                  onClick={() => updateCharacters(finalSpaceCharacters)}
+                >
+                  <ArrowRightAltIcon style={{ color: "#FFFFFF" }} />
+                </Button>
+                <Link to="/demo-dnd" className="button-home-1">
+                  <Button
+                    variant="contained"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <HomeIcon />
+                  </Button>
+                </Link>
+              </>
+            ) : (
+              <div></div>
+            )}
+          </div>
       </Container>
     </>
   );

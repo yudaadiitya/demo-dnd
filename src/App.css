@@ -23,6 +23,21 @@
   }
 }
 
+
+header{
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31);
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0.2px solid gray;
+}
+
+header img{
+  width: 117px;
+}
+
 .characters {
   list-style: none;
   padding-left: 0;
@@ -84,7 +99,8 @@ height: 70px;
   background: #00875a;
   width: 11px;
   height: 70px;
-  left: 0px;
+  position: relative;
+  left: -1px;
   top: 0px;
   border-radius: 12px 0px 0px 12px;
   /* display: flex; */
@@ -93,7 +109,8 @@ height: 70px;
   background: #5e9047;
   width: 10px;
   height: 70px;
-  left: 0px;
+  position: relative;
+  left: -1px;
   top: 0px;
   border-radius: 12px 0px 0px 12px;
   /* display: flex; */
@@ -102,7 +119,8 @@ height: 70px;
   background: #c09934;
   width: 10px;
   height: 70px;
-  left: 0px;
+  position: relative;
+  left: -1px;
   top: 0px;
   border-radius: 12px 0px 0px 12px;
   display: flex;
@@ -111,7 +129,8 @@ height: 70px;
   background: #fd9f28;
   width: 10px;
   height: 70px;
-  left: 0px;
+  position: relative;
+  left: -1px;
   top: 0px;
   border-radius: 12px 0px 0px 12px;
   display: flex;
@@ -120,7 +139,8 @@ height: 70px;
   background: #ea6017;
   width: 10px;
   height: 70px;
-  left: 0px;
+  position: relative;
+  left: -1px;
   top: 0px;
   border-radius: 12px 0px 0px 12px;
   display: flex;
@@ -129,7 +149,8 @@ height: 70px;
   background: #de350b;
   width: 10px;
   height: 70px;
-  left: 0px;
+  position: relative;
+  left: -1px;
   top: 0px;
   border-radius: 12px 0px 0px 12px;
   display: flex;
@@ -173,6 +194,12 @@ height: 70px;
   text-align: right;
   padding-bottom: 20px;
 }
+
+.number-list img{
+  height: 376px;
+  width: 13px;
+}
+
 .number-list p {
   padding: 17px 15px 0px 0;
   font-family: Nunito Sans;
@@ -201,7 +228,10 @@ height: 70px;
   border-radius: 4px;
   width: 132px;
   height: 40px;
+  margin-left: 20px;
 }
+
+
 
 .line {
   justify-content: center;
@@ -245,6 +275,16 @@ height: 70px;
   color: #a5adba;
 }
 
+.instruction img{
+  width: 24px;
+  height: 24px;
+}
+
+.instruction-home img{
+  width: 24px;
+  height: 24px;
+}
+
 .instruction-home {
   font-family: Nunito Sans;
   font-style: normal;
@@ -261,6 +301,11 @@ height: 70px;
   display: flex;
   padding: 0 0 50px 0;
 }
+.container-1{
+  display: flex;
+  padding: 0 0 0 0;
+}
+
 
 .container-paper {
   display: block;
@@ -311,6 +356,14 @@ height: 70px;
   bottom: 125px;
   right: 160px;
 }
+
+
+.button-home-1{
+  position: relative;
+  bottom: 30px;
+  right: 120px;
+}
+
 .button-home-3{
   position: relative;
   top: 530px;
@@ -365,6 +418,11 @@ height: 70px;
     height: 100%;
     flex: 1;
     background: white;
+  }
+  .button-home{
+    position: relative;
+    bottom: 125px;
+    right: 160px;
   }
 }
 

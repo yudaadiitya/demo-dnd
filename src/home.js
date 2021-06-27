@@ -9,6 +9,7 @@ import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import SignalCellularAltIcon from "@material-ui/icons/SignalCellularAlt";
 import "./App.css";
+import Talentlytica from "./assets/Logo/Talentlytica.png";
 import Line from "./assets/images/Rectangle184.png";
 import Signal from "./assets/images/signal.png";
 import { makeStyles } from "@material-ui/core/styles";
@@ -114,12 +115,15 @@ function Home() {
         <div className="App">
           <div className="smartphone">
             <div className="smartphone__content">
+            <header>
+              <img src={Talentlytica} alt="Talentlytica" />
+            </header>
               <div className="layout-home">
                 <div className="instruction-home">
                   <p>Membandingkan Desain</p>
                   <img src={Signal} alt="signal" />
                 </div>
-                <Link to="/demo-dnd/desain-a">
+                <Link to="/demo-dnd/instruction-a" style={{textDecorationLine: "none"}}>
                   <Paper
                     style={{
                       width: 316,
@@ -131,7 +135,7 @@ function Home() {
                     <p className="label-home">Desain A</p>
                   </Paper>
                 </Link>
-                <Link to="/demo-dnd/desain-b">
+                <Link to="/demo-dnd/instruction-b" style={{textDecorationLine: "none"}}>
                   <Paper
                     style={{
                       width: 316,
@@ -143,9 +147,7 @@ function Home() {
                     <p className="label-home">Desain B</p>
                   </Paper>
                 </Link>
-                <a
-                  href="https://yudaadiitya.github.io/prototype-riasec2/"
-                >
+                <Link to="/demo-dnd/instruction-c" style={{textDecorationLine: "none"}}>
                   <Paper
                     style={{
                       width: 316,
@@ -156,7 +158,7 @@ function Home() {
                   >
                     <p className="label-home">Desain C</p>
                   </Paper>
-                </a>
+                </Link>
                 <Button
                   variant="contained"
                   style={{ width: 316, marginBottom: 30 }}
